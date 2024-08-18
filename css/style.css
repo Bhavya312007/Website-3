@@ -1,0 +1,258 @@
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* css variable */
+:root {
+  --navbar-height: 60px;
+}                       
+
+html {
+  font-size: 12px;
+}
+
+/* navigation bar */
+nav {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 3;
+}
+
+/* navigation bar :logo and image */
+
+#logo {
+  margin: 10px;
+}
+#logo img {
+  height: 40px;
+  width: 40px;
+}
+
+/* navigation bar : list styling */
+nav ul {
+  display: flex;
+}
+
+nav::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+nav ul li {
+  list-style: none;
+  font-size: 1.3rem;
+}
+nav ul li a {
+  color: white;
+  display: block;
+  padding: 3px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+
+/* home section */
+#home::before {
+  content: "";
+  background: url("../images/lily-banse--YHSwy6uqvk-unsplash.jpg") no-repeat
+    center/cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.4;
+}
+#home {
+  display: flex;
+  height: 740px;
+  flex-direction: column;
+  padding: 3px 20px;
+  align-items: center;
+  justify-content: center;
+}
+#home h1 {
+  text-align: center;
+  font: "cursive", "calibri";
+}
+
+/* services section */
+#services {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+#services .box {
+  background-color: rgba(128, 128, 128, 0.13);
+  border: 2px solid brown;
+  padding: 10px;
+  border-radius: 50px;
+  margin: 10px;
+  padding: 10px;
+}
+#services .box img {
+  display: block;
+  height: 160px;
+  margin: auto;
+  border-radius: 50%;
+}
+
+/* client section */
+/* #client-section { */
+/* position: relative; */
+/* height: 500px; */
+/* } */
+#client-section::before {
+  content: "";
+  position: absolute;
+  background: url("../images/60.jpg") repeat center/cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.client-item {
+  margin: 30px;
+}
+#clients img {
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
+  border: 10px solid rgb(0, 136, 255);
+  z-index: -2;
+}
+
+/* contact section */
+#contact {
+  position: relative;
+  height: 80vh;
+  border:1px solid red;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+#contact::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.8;
+  background: url("../images/213.jpg") no-repeat center/cover;
+}
+
+#contact form{
+  border:1px solid blue; 
+}
+#contact-box {
+  border:6px solid green;
+  width:100%;
+  height:75%;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+   /* padding-bottom: 34px; */
+}
+#contact-box input,
+#contact-box textarea {
+  /* width: 100%; */
+  width:25vw;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font: 1.2rem;
+}
+.form-group{
+  display:flex;
+  justify-content: space-between;
+  margin:34px;
+}
+/* #contact-box form {
+  width: 40%;
+} */
+#contact-box form label ,#contact-box form span{
+  font-size: 1.8rem;
+  font-family: cursive, "Courier New", Courier, monospace;
+}
+/* footer styling */
+footer {
+  background-color: black;
+  color: white;
+  position: fixed;
+  width: 100vw;
+  bottom: 0px;
+}
+/* utility classes */
+.h-primary {
+  font-size: 5rem;
+  padding: 12 px;
+  font-family: Cursive, "Courier New", Courier, monospace;
+}
+.h-secondary {
+  font-size: 4rem;
+  padding: 12px;
+  font-family: Cursive, "Courier New", Courier, monospa;
+}
+.center {
+  text-align: center;
+}
+p {
+  font-size: 1.3rem;
+}
+.btn {
+  color: rgb(81, 8, 8);
+  background-color: rgb(0, 255, 13);
+  padding: 6px 20px;
+  margin: 12px;
+  border: 2px solid white;
+  border-radius: 12px;
+  opacity: 0.5;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* for tablet */
+@media screen and (device-width>425px) and (device-width<=768px) {
+  #services {
+    flex-wrap: wrap;
+  }
+  /* #clients{
+    flex-wrap: wrap;
+  } */
+  #client-section::before {
+    height: 122.8%;
+  }
+}
+
+/* for laptop */
+@media screen and (device-width>768px) {
+}
+@media screen and (device-width>768px) and (device-width<=1024px) {
+  /* #clients{
+    flex-wrap: wrap;
+  } */
+}
